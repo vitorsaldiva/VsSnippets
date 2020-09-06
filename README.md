@@ -1,0 +1,2 @@
+# VsSnippets
+Visual Studio Snippets
