@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Propriedade com o atributo Column</Title>
+      <Author>Vitor Soares</Author>
+      <Description>Adiciona propriedade com o atributo Column</Description>
+      <Shortcut>propcolumn</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>columnName</ID>
+          <ToolTip>Coluna da tabela</ToolTip>
+          <Default>NomeColuna</Default>
+        </Literal>
+        <Literal>
+          <ID>type</ID>
+          <ToolTip>Tipo da propriedade</ToolTip>
+          <Default>int</Default>
+        </Literal>
+        <Literal>
+          <ID>name</ID>
+          <ToolTip>Nome da Propriedade</ToolTip>
+          <Default>MinhaPropriedade</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="CSharp">
+        <![CDATA[[Column("$columnName$")]
+        
+                 public $type$ $name$ { get; set; }$end$]]>
+      </Code>
+      <Imports>
+        <Import>
+          <Namespace>System.ComponentModel.DataAnnotations.Schema</Namespace>
+        </Import>
+      </Imports>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>
