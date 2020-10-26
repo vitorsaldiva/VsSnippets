@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Cria tabela</Title>
+      <Author>Vitor Soares</Author>
+      <Description>Cria uma tabela</Description>
+      <Shortcut>createtable</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>database</ID>
+          <ToolTip>Base de dados</ToolTip>
+          <Default>DATABASE</Default>
+        </Literal>
+        <Literal>
+          <ID>sigla</ID>
+          <ToolTip>Sigla do sistema</ToolTip>
+          <Default>SIGLA</Default>
+        </Literal>
+        <Literal>
+          <ID>nometabela</ID>
+          <ToolTip>Nome da tabela</ToolTip>
+          <Default>NOMETABELA</Default>
+        </Literal>
+        <Literal>
+          <ID>group</ID>
+          <ToolTip>Grupo do GRANT</ToolTip>
+          <Default>GROUP</Default>
+        </Literal>
+        <Literal>
+          <ID></ID>
+          <ToolTip></ToolTip>
+          <Default></Default>
+        </Literal>
+      </Declarations>
+      <Code Language="SQL">
+        <![CDATA[@USE [$database$]
+                 GO
+
+                 DROP IF EXISTS dbo.tb$sigla$$nometabela$
+                 GO
+                 
+                 CREATE TABLE dbo.tb$sigla$$nometabela$
+                 ( 
+                 )
+                 GO
+                 
+                 GRANT SELECT ON dbo.tb$sigla$$nometabela$ TO $group$ 
+                 GO$end$]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>  
+</CodeSnippets>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Cria procedure</Title>
+      <Author>Vitor Soares</Author>
+      <Description>Cria uma procedure</Description>
+      <Shortcut>createproc</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>database</ID>
+          <ToolTip>Base de dados</ToolTip>
+          <Default>DATABASE</Default>
+        </Literal>
+        <Literal>
+          <ID>sigla</ID>
+          <ToolTip>Sigla do sistema</ToolTip>
+          <Default>SIGLA</Default>
+        </Literal>
+        <Literal>
+          <ID>acao</ID>
+          <ToolTip>Ação da procedure</ToolTip>
+          <Default>ACAO</Default>
+        </Literal>
+        <Literal>
+          <ID></ID>
+          <ToolTip></ToolTip>
+          <Default></Default>
+        </Literal>
+      </Declarations>
+      <Code Language="SQL">
+        <![CDATA[@USE [$database$]
+                 GO
+
+                 DROP IF EXISTS dbo.sp$sigla$$acao$
+                 GO
+                 
+                 CREATE PROCEDURE dbo.sp$sigla$$acao$
+                 AS
+                 ( 
+                 )
+                 GO
+                 $end$]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>  
+</CodeSnippets>
