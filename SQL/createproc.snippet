@@ -12,17 +12,17 @@
         <Literal>
           <ID>database</ID>
           <ToolTip>Base de dados</ToolTip>
-          <Default>DATABASE</Default>
+          <Default>Database</Default>
         </Literal>
         <Literal>
           <ID>sigla</ID>
           <ToolTip>Sigla do sistema</ToolTip>
-          <Default>SIGLA</Default>
+          <Default>Sigla</Default>
         </Literal>
         <Literal>
           <ID>acao</ID>
           <ToolTip>Ação da procedure</ToolTip>
-          <Default>ACAO</Default>
+          <Default>Acao</Default>
         </Literal>
         <Literal>
           <ID></ID>
@@ -31,18 +31,19 @@
         </Literal>
       </Declarations>
       <Code Language="SQL">
-        <![CDATA[@USE [$database$]
-                 GO
+<![CDATA[
+USE [$database$]
+GO
 
-                 DROP IF EXISTS dbo.sp$sigla$$acao$
-                 GO
+DROP PROCEDURE IF EXISTS dbo.sp$sigla$$acao$
+GO
                  
-                 CREATE PROCEDURE dbo.sp$sigla$$acao$
-                 AS
-                 ( 
-                 )
-                 GO
-                 $end$]]>
+CREATE PROCEDURE dbo.sp$sigla$$acao$
+AS
+( 
+)
+GO
+$end$]]>
       </Code>
     </Snippet>
   </CodeSnippet>  
