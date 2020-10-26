@@ -25,9 +25,9 @@
           <Default>Acao</Default>
         </Literal>
         <Literal>
-          <ID></ID>
-          <ToolTip></ToolTip>
-          <Default></Default>
+          <ID>usergroup</ID>
+          <ToolTip>Grupo de usuários</ToolTip>
+          <Default>UserGroup</Default>
         </Literal>
       </Declarations>
       <Code Language="SQL">
@@ -42,6 +42,8 @@ CREATE PROCEDURE dbo.sp$sigla$$acao$
 AS
 ( 
 )
+GO
+GRANT EXECUTE ON dbo.sp$sigla$$acao$ TO usergroup
 GO
 $end$]]>
       </Code>
