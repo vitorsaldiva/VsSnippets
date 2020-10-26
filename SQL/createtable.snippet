@@ -12,22 +12,22 @@
         <Literal>
           <ID>database</ID>
           <ToolTip>Base de dados</ToolTip>
-          <Default>DATABASE</Default>
+          <Default>BaseDados</Default>
         </Literal>
         <Literal>
           <ID>sigla</ID>
           <ToolTip>Sigla do sistema</ToolTip>
-          <Default>SIGLA</Default>
+          <Default>Sigla</Default>
         </Literal>
         <Literal>
           <ID>nometabela</ID>
           <ToolTip>Nome da tabela</ToolTip>
-          <Default>NOMETABELA</Default>
+          <Default>NomeTabela</Default>
         </Literal>
         <Literal>
           <ID>group</ID>
           <ToolTip>Grupo do GRANT</ToolTip>
-          <Default>GROUP</Default>
+          <Default>UserGroup</Default>
         </Literal>
         <Literal>
           <ID></ID>
@@ -36,19 +36,19 @@
         </Literal>
       </Declarations>
       <Code Language="SQL">
-        <![CDATA[@USE [$database$]
-                 GO
-
-                 DROP IF EXISTS dbo.tb$sigla$$nometabela$
-                 GO
+        <![CDATA[
+        USE [$database$]
+        GO
+        DROP IF EXISTS dbo.tb$sigla$$nometabela$
+        GO
+        
+        CREATE TABLE dbo.tb$sigla$$nometabela$
+        ( 
+        )
+        GO
                  
-                 CREATE TABLE dbo.tb$sigla$$nometabela$
-                 ( 
-                 )
-                 GO
-                 
-                 GRANT SELECT ON dbo.tb$sigla$$nometabela$ TO $group$ 
-                 GO$end$]]>
+        GRANT SELECT ON dbo.tb$sigla$$nometabela$ TO $group$ 
+        GO$end$]]>
       </Code>
     </Snippet>
   </CodeSnippet>  
